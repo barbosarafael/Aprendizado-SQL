@@ -1,0 +1,25 @@
+#--- TEORIA
+
+SGBD: Sistema Gerenciador de Banco de Dados
+
+- Para banco de dados maiores
+- Complemento do banco de dados
+- Grupo de programas para interação com os dados
+
+
+
+DBMS: DataBase Manegement System
+
+- Para banco de dados menores
+
+
+
+#-------------------------
+
+SQL: Structured Query Language (Linguagem estruturada de consulta)
+
+1. DDL (Data Definition Language): CREATE, ALTER e DROP
+2. DML (Data Manipulation Language): INSERT, UPDATE e DELETE
+3. DQL (Data Query Language): SELECT
+4. DCL (Data Control Language): GRANT e REVOKE 
+5. DTL (Data Transaction Language): START TRANSACTION, COMMIT e ROLLBACK

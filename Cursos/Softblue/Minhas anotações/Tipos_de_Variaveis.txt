@@ -1,0 +1,46 @@
+# Tipos de variáveis
+
+## Numérico
+
+1. Boolean: 0 ou 1 (FALSE ou TRUE) 1 bit
+2. Tinyint
+3. Smallint
+4. Int
+5. Bigint
+6. Float (casas decimais)
+7. Double (casas decimais)
+8. Numeric (casas decimais)
+
+## String
+
+1. Char:  
+2. Varchar: 
+
+## Data e Hora
+
+1. Date
+2. Time
+3. Datetime
+4. Timestamp
+
+## Listas costumizadas
+
+1. Enum
+
+## Outros tipos de dados
+
+1. Blob: Informações binárias, arquivos e imagens.
+2. Text: Grandes strings 
+3. Redes: IP, Mac-Adress
+4. Monetários: R$
+5. Geométricos: Geoprocessamento
+
+## Atributos
+
+1. NULL/Not NULL: Permite ou não valores nulos
+2. Unsigned/Signed: Permite ou não valores negativos
+3. Auto-increment: Sequências, contadores
+4. Zerofill: Preenche o valor numérico completando com zeros a esquerda.
+
+
+

@@ -1,0 +1,32 @@
+#--- Relacionamentos 
+
+#-- Ligações entre tabelas
+
+1. Chave primária (Primary-key):
+
+- Coluna com valores únicos;
+- CPF, RG, etc;
+
+2. Chave composta 
+
+- Composição de duas ou mais colunas para gerar uma combinação única
+
+3. Chave estrangeira (Foreign-key)
+
+- Coluna que armazena a chave primária de outra tabela
+- Chave primária de um ID em outra tabela
+
+4. Relacionamento 1 para 1
+
+- Para cada registro da primeira tabela existe no máximo um correspondente na
+segunda tabela
+
+5. 1 para muitos
+
+- Para cada registro, pode existir um ou mais correspondentes na segunda tabela
+
+
+6. Muitos para muitos
+
+- Para cada registro, pode existir um ou mais correspondentes na segunda tabela e
+vice-versa

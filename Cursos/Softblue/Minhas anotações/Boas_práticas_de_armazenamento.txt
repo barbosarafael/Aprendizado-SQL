@@ -1,0 +1,12 @@
+# Boas práticas de armazenamento
+
+1. Quanto menor o tipo de dado, menos espaço ele ocupará;
+2. Quanto menor o tipo de dado, mais rápido é o processamento;
+
+# Maus usos dos tipos de dados
+
+1. Armazenar dados numéricos em colunas string
+2. Armazenar dados numéricos em campos maiores que o necessário;
+3. Criar campos de strings maiores do que o necessário
+
+# Qual o menos e maior valor que o campo poderá receber ?
