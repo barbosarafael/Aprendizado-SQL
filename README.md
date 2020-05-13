@@ -6,5 +6,5 @@ Deixo o link abaixo os scripts e minhas anotações (em txt) que vou acompanhand
 
 > [Minhas anotações](https://github.com/barbosarafael/Aprendizado-SQL/tree/master/Cursos/Softblue/Minhas%20anota%C3%A7%C3%B5es)
 
-> Scripts 
+## Scripts 
 > - Criando um banco de dados no MySQL 
