@@ -1,0 +1,58 @@
+Current tables:
+friends_of_pickles
+id	name	gender	species	height_cm
+1	Dave	male	human	180
+2	Mary	female	human	160
+3	Fry	male	cat	30
+4	Leela	female	cat	25
+5	Odie	male	dog	40
+6	Jumpy	male	dog	35
+7	Sneakers male	dog	55
+
+
+#--- Lesson 8: IN
+
+Can you run a query that would return the rows that are not cats or dogs?
+
+SELECT * FROM friends_of_pickles WHERE species NOT IN ("cat", "dog")
+
+Result:
+id	name	gender	species	height_cm
+1	Dave	male	human	180
+2	Mary	female	human	160
+
+
+#--- Lesson 9: DISTINCT
+
+Can you return a list of the distinct species of animals greater than 50cm 
+in height?
+
+SELECT DISTINCT species FROM friends_of_pickles WHERE height_cm > 50
+
+Result:
+species
+human
+dog
+
+
+#--- Lesson 10: ORDER BY (That returns the names in ascending alphabetical order)
+
+Can you run a query that sorts the friends_of_pickles by height_cm in descending
+order?
+
+
+SELECT * FROM friends_of_pickles ORDER BY height_cm DESC;
+
+
+#--- Lesson 11: LIMIT # of returned rows
+
+Can you return the single row (and all columns) of the tallest friends_of_pickles?
+
+
+SELECT * FROM friends_of_pickles LIMIT 1;
+
+
+Result:
+id	name	gender	species	height_cm
+1	Dave	male	human	180
+
