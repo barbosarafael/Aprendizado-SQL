@@ -20,3 +20,15 @@ Link do curso de SQL: https://www.sql-easy.com/
 - DISTINCT
 - ORDER BY
 - LIMIT # of returned rows
+
+> [Aula 3](https://github.com/barbosarafael/Aprendizado-SQL/blob/master/Scripts_Comandos/Aula3%2018052020-%20.txt)
+
+- COUNT(*)
+- COUNT(*) ... WHERE
+- SUM
+- AVG
+- MAX and MIN
+- GROUP BY
+- Nested queries
+- NULL
+- Date
