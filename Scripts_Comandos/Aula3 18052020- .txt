@@ -1,0 +1,172 @@
+friends_of_pickles
+id	name	gender	species	height_cm
+1	Dave	male	human	180
+2	Mary	female	human	160
+3	Fry	male	cat	30
+4	Leela	female	cat	25
+5	Odie	male	dog	40
+6	Jumpy	male	dog	35
+7	Sneakers male	dog	55
+
+
+#--- Lesson 12: COUNT(*)
+
+Returns the total number of rows in the table friends_of_pickles.
+
+SELECT COUNT(*) FROM friends_of_pickles;
+
+Result:
+COUNT(*)
+7
+
+
+#--- Lesson 13: COUNT(*) ... WHERE
+
+Can you return the number of rows in friends_of_pickles where the species is a dog?
+SELECT COUNT(*) FROM friends_of_pickles WHERE species = "dog";
+
+
+
+Result:
+COUNT(*)
+3
+
+
+family_members
+id	name	species	num_books_read	num_legs
+1	Dave	human		200	2
+2	Mary	human		180	2
+3	Pickles	dog		0	4
+
+#--- Lesson 14: SUM
+
+We can use the SUM keyword in order to find the sum of a given value.
+
+Can you find the total num_books_read made by this family?
+SELECT SUM(num_books_read) FROM family_members;
+
+
+
+Result:
+SUM(num_books_read)
+380
+
+
+#--- Lesson 15: AVG
+
+We can use the AVG keyword in order to find the average of a given value.
+
+Can you find the average num_books_read made by each family member?
+
+SELECT AVG (num_books_read) FROM family_members;
+
+
+Result:
+AVG (num_books_read)
+126.66666666666667
+
+
+#--- Lesson 16: MAX and MIN
+
+We can use the MAX and MIN to find the maximum or minimum value of a table.
+
+Can you find the highest num_books_read that a family member makes?
+
+SELECT MAX(num_books_read) FROM family_members;
+
+
+Result:
+MAX(num_books_read)
+200
+
+
+friends_of_pickles
+id	name	gender	species	height_cm
+1	Dave	male	human	180
+2	Mary	female	human	160
+3	Fry	male	cat	30
+4	Leela	female	cat	25
+5	Odie	male	dog	40
+6	Jumpy	male	dog	35
+7	Sneakers male	dog	55
+
+#--- Lesson 17: GROUP BY
+
+You can use aggregate functions such as COUNT, SUM, AVG, MAX, and MIN with the GROUP BY clause.
+
+When you GROUP BY something, you split the table into different piles based on the value of each row.
+
+Can you return the tallest height for each species? Remember to return the species name next to the height too, like in the example query.
+
+SELECT MAX(height_cm), species FROM friends_of_pickles GROUP BY species;
+
+SELECT species, MAX(height_cm) FROM friends_of_pickles GROUP BY species;
+
+
+Result:
+MAX(height_cm)	species
+	30	cat
+	55	dog
+180	human
+
+
+family_members
+id	name	species	num_books_read	num_legs
+1	Dave	human		200	2
+2	Mary	human		180	2
+3	Pickles	dog		0	4
+
+
+#--- Lesson 18: Nested queries
+
+In SQL, you can put a SQL query inside another SQL query.
+
+Can you return the family members that have the highest num_books_read?
+
+SELECT * FROM family_members WHERE num_books_read = (SELECT MAX(num_books_read) FROM family_members);
+
+
+Result:
+id	name	species	num_books_read	num_legs
+1	Dave	human		200	2
+
+#--- Lesson 19: NULL
+
+Sometimes, in a given row, there is no value at all for a given column. 
+
+Can you return all of the rows of family_members where favorite_book is not null?
+
+family_members
+id	name	gender	species	favorite_book
+1	Dave	male	human	To Kill a Mockingbird
+2	Mary	female	human	Gone with the Wind
+3	Pickles	male	dog	null
+
+
+SELECT * FROM family_members WHERE favorite_book IS NOT NULL;
+
+
+Result:
+id	name	gender	species	favorite_book
+1	Dave	male	human	To Kill a Mockingbird
+2	Mary	female	human	Gone with the Wind
+
+#--- Lesson 20: Date
+
+celebs_born
+id	name	birthdate
+1	Michael Jordan	1963-02-17
+2	Justin Timberlake	1981-01-31
+3	Taylor Swift	1989-12-13
+
+Sometimes, a column can contain a date value. The first 4 digits represents the year, the next 2 digits represents the month, and the next 2 digits represents the day of the month. For example, 1985-07-20 would mean July 20, 1985.
+
+
+Can you return a list of celebrities that were born after September 1st, 1980?
+
+SELECT * FROM celebs_born WHERE birthdate > "1980-09-01";
+
+Result:
+id	name			birthdate
+2	Justin Timberlake	1981-01-31
+3	Taylor Swift		1989-12-13
