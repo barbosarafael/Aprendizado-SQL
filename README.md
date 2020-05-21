@@ -32,3 +32,12 @@ Link do curso de SQL: https://www.sql-easy.com/
 - Nested queries
 - NULL
 - Date
+
+> [Aula 4](https://github.com/barbosarafael/Aprendizado-SQL/blob/master/Scripts_Comandos/Aula4%2020052020.txt)
+
+- Inner joins
+- Multiple joins
+- Joins with WHERE
+- Left joins
+- Table alias
+- Column alias
