@@ -41,3 +41,12 @@ Link do curso de SQL: https://www.sql-easy.com/
 - Left joins
 - Table alias
 - Column alias
+
+
+> [Aula 5](https://github.com/barbosarafael/Aprendizado-SQL/blob/master/Scripts_Comandos/Aula5%2029052020.txt)
+
+- Self joins
+- LIKE
+- CASE
+- SUBSTR
+- COALESCE
