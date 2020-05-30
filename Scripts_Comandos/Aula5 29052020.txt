@@ -1,0 +1,113 @@
+#--- Lesson 27: Self joins
+
+Current tables:
+rps
+id	name	defeats_id
+1	Rock	3
+2	Paper	1
+3	Scissors	2
+employees
+id	name		title			boss_id
+1	Patrick Smith	Software Engineer	2
+2	Abigail Reed	Engineering Manager	3
+3	Bob Carey	Director of Engineering	4
+4	Maxine Tang	CEO			null
+
+Can you run a query that returns the name of an employee and the name of their boss? Use column aliases to make the columns employee_name and boss_name.
+
+
+SELECT emp1.name AS employee_name, emp2.name AS boss_name
+FROM employees AS emp1
+INNER JOIN employees AS emp2
+ON emp1.boss_id = emp2.id
+
+
+Result:
+employee_name	boss_name
+Patrick Smith	Abigail Reed
+Abigail Reed	Bob Carey
+Bob Carey	Maxine Tang
+
+
+#--- Lesson 28: LIKE
+
+
+robots
+id	name
+1	Robot 2000
+2	Champion Robot 2001
+3	Dragon
+4	Turbo Robot 2002
+5	Super Robot 2003
+6	Super Turbo Robot 2004
+7	Not A Robot
+8	Unreleased Turbo Robot 2111
+
+
+Can you run a query that returns "Robot" followed by a year between 2000 and 2099? (So 2015 is a valid value at the end, but 2123 is not.)
+
+
+SELECT * FROM robots
+WHERE name LIKE "%Robot 20__"
+
+
+#--- Lesson 29: CASE
+
+friends_of_pickles
+id	name	gender	species	height_cm
+1	Dave	male	human	180
+2	Mary	female	human	160
+3	Fry	male	cat	30
+4	Leela	female	cat	25
+5	Odie	male	dog	40
+6	Jumpy	male	dog	35
+7	Sneakers male	dog	55
+
+Can you return the results with a column named sound that returns "talk" for humans, "bark" for dogs, and "meow" for cats?
+
+
+SELECT *,
+CASE WHEN species = "human" THEN "talk"
+WHEN species = "dog" THEN "bark"
+ELSE "meow" 
+END AS sound
+FROM friends_of_pickles
+
+
+#--- Lesson 30: SUBSTR
+
+
+robots
+id		name			location
+1	R2000 - Robot 2000			New City, NY
+2	R2001 - Champion Robot 2001	Palo Alto, CA
+3	D0001 - Dragon			New York City, NY
+4	R2002 - Turbo Robot 2002	Spring Valley, NY
+5	R2003 - Super Robot 2003	Nyack, NY
+6	R2004 - Super Turbo Robot 2004	Tampa, FL
+7	N0001 - Not A Robot		Seattle, WA
+8	U2111 - Unreleased Turbo Robot 2111	Buffalo, NY
+
+Can you return all of the robots that are located in NY?
+
+
+SELECT * FROM robots 
+WHERE SUBSTR(location, -2) 
+LIKE '%NY'
+
+
+#--- Lesson 31: COALESCE
+
+fighters
+id	name	gun	sword	tank
+1	US Marine	Colt 9mm SMG	Swiss Army Knife	M1A1 Abrams Tank
+2	John Wilkes Booth	.44 caliber Derringer	null	null
+3	Zorro	null	Sword of Zorro	null
+4	Innocent Bystander	null	null	null
+
+
+Suppose that a fighter's tank could count as a weapon, and it would take precedence over the gun and the sword. Could you find each fighter's weapon in that scenario?
+
+
+SELECT name, COALESCE(tank, gun, sword) as weapon 
+FROM fighters;
