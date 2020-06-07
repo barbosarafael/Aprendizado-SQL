@@ -1,32 +1,63 @@
-#--- Relacionamentos 
+- Normalização de dados: Relacionamentos
 
-#-- Ligações entre tabelas
+- Chaves
 
-1. Chave primária (Primary-key):
+- Relacionamentos: Ligações entre tabelas
 
-- Coluna com valores únicos;
-- CPF, RG, etc;
+- Primary Key (PK):
 
-2. Chave composta 
+	- Colunas com valores únicos;
+	- Identificador único;
+	- Exemplo: CPF ou RG. Não existe dois valores de CPF ou RG iguais;
 
-- Composição de duas ou mais colunas para gerar uma combinação única
+- Chave composta:
 
-3. Chave estrangeira (Foreign-key)
+	- Composição de duas ou mais colunas para gerar uma combinação única;
+	- Basicamente, juntar/concatenar duas variáveis para criar uma chave composta;
 
-- Coluna que armazena a chave primária de outra tabela
-- Chave primária de um ID em outra tabela
+- Chave estrangeira (FK):
 
-4. Relacionamento 1 para 1
+	- Coluna que armazena a chave primária de outra tabela;
 
-- Para cada registro da primeira tabela existe no máximo um correspondente na
-segunda tabela
+- Relacionamento 1:1
 
-5. 1 para muitos
+	- Para cada registro da primeira tabela existe no máximo um correspondente na segunda tabela, 
+	e vice-versa;
+	- Tabela PESSOAS e Tabela Habilitacoes_Motorista
 
-- Para cada registro, pode existir um ou mais correspondentes na segunda tabela
+- Relacionamento 1 para muitos (1: *)
 
+	- Para cada registro da primeira tabela pode existir um ou mais correspondentes na segunda, mas
+	para cada registro da segunda tabela existe apenas uma correspondência na primeira;
+	- Tabela PESSOAS e Tabela VEICULO
 
-6. Muitos para muitos
+- Relacionamento muitos para muitos (* : *)
 
-- Para cada registro, pode existir um ou mais correspondentes na segunda tabela e
-vice-versa
+	- Para cada registro da primeira pode existir um ou mais correspondentes na segunda e para cada
+	registro da segunda tabela existe várias correspondência na primeira;
+	- Tabela PESSOAS e Tabela PROFISSOES
+
+- Boas práticas no uso de chaves:
+
+	- Quanto menor, melhor;
+	- Transparente para o usuário;
+
+- Anomalias dos dados:
+
+	- "Fazem tudo";
+	- Anomalia de inserção: Separação de informações;
+	- Anomalia de exclusão: Impede a exclusão de registros devido ao relacionamento de tabelas;
+	- Anomalia de alteração: Impede a alteração de registros devido ao relacionamento de tabelas;
+	- Como resolver: Normalizar dados;	
+	- Pois evitam anomalias, facilitam a manutenção, maxizam a performance e mantém a integridade
+	dos dados.
+
+- Formas de Normalização:
+
+	- 1ª: Cada linha deve representar somente um registro e cada célula deve conter um único valor;
+	- 2ª: Já ter passado pela 1ª normalização. Atributos não chave devem depender de alguma das 
+	chaves da tabela - Também separar tabelas que não são tão úteis em escalabilidade;
+	- 3ª: A partir da 1ª e 2ª, atributos não chave depende exclusivamente da chave primária da 
+	tabela;
+	- 4ª e 5ª: A partir das anteriores, separam em novas tabelas valores que ainda 
+	estejam redudantes em uma mesma coluna;
