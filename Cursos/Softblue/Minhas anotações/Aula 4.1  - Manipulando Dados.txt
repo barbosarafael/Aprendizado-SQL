@@ -1,0 +1,72 @@
+- DML e DQL 
+
+- Linguagem a manipulação de dados
+
+	- INSERT: Insere dados
+	- UPDATE: Altera dados
+	- DELETE: Exclui dados
+
+- Linguagem de consulta de dados
+
+	- SELECT: Retorna dados, ordena, agrupa, filtra e funções aritméticas
+
+- Exemplos:
+
+	- INSERT: INSERT INTO Tabela VALUES (Valores)
+
+	- SELECT: SELECT Campos FROM Tabela
+
+	- UPDATE: UPDATE Tabela SET Campo = Valor
+
+	- DELETE FROM Tabela
+
+- Filtros de seleção (WHERE)
+
+
+- Operadores relacionais:
+
+	- Igual: =
+	- Diferente: !=
+	- >, <, >= e <=
+	- Nulo: IS NULL
+	- Não nulo: IS NOT NULL
+	- Entre intervalo: BETWEEN
+	- Valor parcial: LIKE
+
+- Operadores lógicos:
+
+	- AND
+	- OR
+	- NOT
+
+- Consultando dados com filtros:
+
+SELECT Campos FROM Tabela WHERE Condição
+
+UPDATE Tabela SET Campo = Valor WHERE Condição
+
+DELETE FROM Tabela WHERE Condição
+
+
+- Apelido de tabela
+
+SELECT Campos FROM Tabela tabela_um
+
+- Apelido de campos
+
+SELECT Campo AS Apelido FROM Tabela
+
+- Unindo seleções 
+
+SELECT * FROM Tabela1 UNION SELECT * FROM Tabela2
+
+
+
+
+
+
+
+	
+
+
+
