@@ -1,0 +1,89 @@
+# Relacionamentos 
+
+- Informações relacionadas entre si;
+
+- Em tabelas diferentes;
+
+- Possuem campos em comum;
+
+- JOIN
+
+- Exemplo: SELECT ... FROM T1 JOIN T2 ON T1.FK = T2.PK
+
+- Exemplo: SELECT ... FROM T1 JOIN T2 ON Chave
+
+- Inner Join:
+
+	- Join padrão
+	- Produto cartesiano
+	- Combina todas as linhas da primeira tabela com todas as linhas da segunda tabela, que
+	satisfaçam as condições das chaves;
+	- Exemplo: SELECT * FROM pessoas JOIN veiculos ON PESSOAS.CPF = VEICULOS.CPF
+
+- Equi Join:
+
+	- Similar ao Inner
+	- As chaves devem possuir os mesmos nomes
+	- SELECT * FROM pessoas JOIN veiculos USING (CPF);
+
+- Non equi join
+
+	- Relacionamento sem um campo em comum;
+	- Exemplo:
+	SELECT pessoas.nome, pessoas.salario, salario.faixa 
+	FROM PESSOAS AS pessoas 
+	INNER JOIN
+	SALARIOS AS salario
+	ON pessoas.salario BETWEEN salario.inicio AND salario.fim
+
+- Outer join, left join, left outer join
+
+	- Linhas que não satisfazem a condição de união
+	- Left: Linhas da primeira tabela cujo campo de condição não satisfaçam a união de
+	tabelas
+	- Exemplo:
+	SELECT * FROM pessoas
+	LEFT JOIN veiculos
+	ON pessoas.cpf = veiculos.cpf
+	
+- Right Join, Right outer Join
+
+	- Right: Linhas da segunda tabela cujo campo de condição não satisfaçam a união de 
+	tabelas
+	- Exemplo:
+	SELECT * FROM pessoas
+	RIGHT JOIN veiculos
+	ON pessoas.cpf = veiculos.cpf
+
+- Full outer Join
+
+	- Combinação do Left + Right
+	- Linhas da primeira e segunda tabela cujo campo de condição não satisfaçam a união
+	de tabelas
+	- Exemplo:	
+	SELECT * FROM pessoas
+	FULL JOIN veiculos
+	ON pessoas.cpf = veiculos.cpf 
+
+- Self Join
+
+	- União da tabela com ela mesmo
+	- Exemplo:
+	SELECT a.nome, b.nome AS indicado_por FROM pessoas AS a
+	JOIN pessoas AS b
+	ON a.indicado = b.cpf
+
+
+- Visões: 
+
+	- Relação que não faz parte do modelo lógico;
+	- SELECT para ser programada a qualquer momento
+	- Expressões de consulta utilizadas rotinateiramente 
+	- Economia de espaço em disco
+	- Centralização de código
+
+Exemplos:
+
+CREATE VIEW Nome AS ExpressãoSQL
+ALTER VIEW Nome Propriedade
+DROP VIEW Nome

@@ -1,0 +1,117 @@
+# Tipos de variáveis
+
+## Numérico
+
+1. Boolean: 0 ou 1 (FALSE ou TRUE) 1 bit
+2. Tinyint
+3. Smallint
+4. Int
+5. Bigint
+6. Float (casas decimais)
+7. Double (casas decimais)
+8. Numeric (casas decimais)
+
+## String
+
+1. Char:  
+2. Varchar: 
+
+## Data e Hora
+
+1. Date
+2. Time
+3. Datetime
+4. Timestamp
+
+## Listas costumizadas
+
+1. Enum
+
+## Outros tipos de dados
+
+1. Blob: Informações binárias, arquivos e imagens.
+2. Text: Grandes strings 
+3. Redes: IP, Mac-Adress
+4. Monetários: R$
+5. Geométricos: Geoprocessamento
+
+## Atributos
+
+1. NULL/Not NULL: Permite ou não valores nulos
+2. Unsigned/Signed: Permite ou não valores negativos
+3. Auto-increment: Sequências, contadores
+4. Zerofill: Preenche o valor numérico completando com zeros a esquerda.
+
+# Boas práticas de armazenamento
+
+1. Quanto menor o tipo de dado, menos espaço ele ocupará;
+2. Quanto menor o tipo de dado, mais rápido é o processamento;
+
+# Maus usos dos tipos de dados
+
+1. Armazenar dados numéricos em colunas string
+2. Armazenar dados numéricos em campos maiores que o necessário;
+3. Criar campos de strings maiores do que o necessário
+
+# Bom uso de dados: qual o menos e maior valor que o campo poderá receber ?
+
+
+# Linguagem de definição de dados (DDL)
+
+1. Create: Cria uma estrutura;
+2. Alter: Altera uma estrutura
+3. Drop: Exclui uma estrutura
+
+## Criando um banco de dados:
+
+Exemplo:
+
+1. "Servidor"
+a) "Banco" do RH e do Estoque
+i) "Tabelas": Pessoas, Cargos e Produtos
+
+### Comando no SQL para criar:
+
+CREATE DATABASE "Nome" (sem espaços e caracteres especiais, de preferência)
+
+### Alterar um banco:
+
+ALTER DATABASE "Nome" "Propriedade"
+
+### Excluir o banco de dados do servidor:
+
+DROP DATABASE "Nome"
+
+Não tem como voltar atrás.
+
+## Criando um banco de dados
+
+Tabela: Pessoas
+Campos: CPF e Nome
+Atributos: Not Null e Primary Key (CPF) e Not Null (Nome)
+
+## Criando uma tabela
+
+CREATE TABELA "Nome" (Campos que irão compor a sua tabela)
+
+- Sintaxe de descrição de campo:
+
+a) Nome; b) Tipo de dado; c) Atributos
+
+- Atributos: Null, Zerofill, Unsigned, Auto-increment, Chave
+
+## Alterar uma propriedade da tabela
+
+ALTER TABLE "Nome" (Propriedade)
+
+## Excluir uma tabela
+
+DROP TABLE "Nome"
+
+## Sequências
+
+CREATE SEQUENCE "Nome"
+
+ALTER SEQUENCE "Nome" Propriedade
+
+DROP SEQUENCE "Nome"

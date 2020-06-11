@@ -1,0 +1,63 @@
+- Normalização de dados: Relacionamentos
+
+- Chaves
+
+- Relacionamentos: Ligações entre tabelas
+
+- Primary Key (PK):
+
+	- Colunas com valores únicos;
+	- Identificador único;
+	- Exemplo: CPF ou RG. Não existe dois valores de CPF ou RG iguais;
+
+- Chave composta:
+
+	- Composição de duas ou mais colunas para gerar uma combinação única;
+	- Basicamente, juntar/concatenar duas variáveis para criar uma chave composta;
+
+- Chave estrangeira (FK):
+
+	- Coluna que armazena a chave primária de outra tabela;
+
+- Relacionamento 1:1
+
+	- Para cada registro da primeira tabela existe no máximo um correspondente na segunda tabela, 
+	e vice-versa;
+	- Tabela PESSOAS e Tabela Habilitacoes_Motorista
+
+- Relacionamento 1 para muitos (1: *)
+
+	- Para cada registro da primeira tabela pode existir um ou mais correspondentes na segunda, mas
+	para cada registro da segunda tabela existe apenas uma correspondência na primeira;
+	- Tabela PESSOAS e Tabela VEICULO
+
+- Relacionamento muitos para muitos (* : *)
+
+	- Para cada registro da primeira pode existir um ou mais correspondentes na segunda e para cada
+	registro da segunda tabela existe várias correspondência na primeira;
+	- Tabela PESSOAS e Tabela PROFISSOES
+
+- Boas práticas no uso de chaves:
+
+	- Quanto menor, melhor;
+	- Transparente para o usuário;
+
+- Anomalias dos dados:
+
+	- "Fazem tudo";
+	- Anomalia de inserção: Separação de informações;
+	- Anomalia de exclusão: Impede a exclusão de registros devido ao relacionamento de tabelas;
+	- Anomalia de alteração: Impede a alteração de registros devido ao relacionamento de tabelas;
+	- Como resolver: Normalizar dados;	
+	- Pois evitam anomalias, facilitam a manutenção, maxizam a performance e mantém a integridade
+	dos dados.
+
+- Formas de Normalização:
+
+	- 1ª: Cada linha deve representar somente um registro e cada célula deve conter um único valor;
+	- 2ª: Já ter passado pela 1ª normalização. Atributos não chave devem depender de alguma das 
+	chaves da tabela - Também separar tabelas que não são tão úteis em escalabilidade;
+	- 3ª: A partir da 1ª e 2ª, atributos não chave depende exclusivamente da chave primária da 
+	tabela;
+	- 4ª e 5ª: A partir das anteriores, separam em novas tabelas valores que ainda 
+	estejam redudantes em uma mesma coluna;
