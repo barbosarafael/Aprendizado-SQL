@@ -1,0 +1,31 @@
+#--- Controle de acesso
+
+- Pessoas com autorização quem pode fazer determinada operação;
+
+- Níveis de acesso:
+	- Banco de dados
+	- Tabelas 
+	- Colunas
+	- Registros
+
+- Níveis de ações:
+
+	- Gerenciar estruturas 
+	- Gerenciar dados
+	- Ler dados
+
+
+- Possui acesso ao servidor ?
+- Possui acesso ao banco ?
+- Possui acesso a tabela ?
+- Possui acesso a coluna ?
+- Possui acesso ao registro ?
+- Possui acesso a operação ?
+
+
+#--- Data Control Language
+
+- CREATE USER Nome
+- DROP USER Nome 
+- GRANT Ação ON Estrutura TO Usuário: Habilitando acesso
+- REVOKE Ação ON Estrutura FROM Usuário: Revogando acesso
