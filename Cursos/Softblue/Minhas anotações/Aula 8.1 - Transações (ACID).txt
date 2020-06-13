@@ -1,0 +1,16 @@
+#--- Transações
+
+- Conjunto de operações
+
+- ACID:
+
+	- Atomicidade;
+	- Consistência;
+	- Isolamento
+	- Durabilidade
+
+- Data Transaction Language
+
+	- START TRANSACTION
+	- COMMIT
+	- ROLLBACK
