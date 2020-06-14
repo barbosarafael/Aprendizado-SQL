@@ -1,0 +1,36 @@
+- Blocos de códigos SQL armazenados no banco;
+
+- Vantagens:
+	
+	- Centralização;
+	- Segurança;
+	- Performance;
+	- Suporte a transações.
+
+- Exemplo:
+
+	- Limpeza de registros vencidos;
+	- CREATE PROCEDURE Nome
+	- CALL Nome ou EXECUTE Nome
+	- DROP PROCEDURE Nome
+
+
+#--- Triggers:
+
+- Eventos que disparam códigos SQL;
+
+- Execução de código SQL baseado em eventos;
+
+- Tipos:
+
+	- BEFORE INSERT
+	- BEFORE UPDATE
+	- BEFORE DELETE
+	- AFTER INSERT
+	- AFTER UPDATE
+	- AFTER DELETE
+
+- CREATE TRIGGER Nome Tipo ON Tabela
+
+- DROP TRIGGER Nome
+
