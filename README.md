@@ -9,11 +9,8 @@
 <p align="center">
   <img alt="decision_tree" src="https://www.sql-easy.com/logo.png" alt="drawing" width="482" height="130"/>
   <br>
+    <em> Link do curso: https://www.sql-easy.com/ </em>
 </p>
-
-
-
-Link do curso: https://www.sql-easy.com/
 
 > [Aula 1](https://github.com/barbosarafael/Aprendizado-SQL/blob/master/Scripts_Comandos/Aula1%2015052020.txt)
 
@@ -36,6 +33,14 @@ Link do curso: https://www.sql-easy.com/
 - Self joins; LIKE; CASE; SUBSTR; COALESCE.
 
 ## HackerRank
+
+<p align="center">
+  <img alt="decision_tree" src="https://miro.medium.com/max/672/1*_64-aCeFjiMDxFZbu4jB-g.png" alt="drawing" width="482" height="130"/>
+  <br>
+    <em> Link do curso: https://www.hackerrank.com/domains/sql </em>
+</p>
+
+
 
 Atualmente estou fazendo alguns exercícios neste: https://www.hackerrank.com/domains/sql. Para não perder a prática e ir aprofundando de pouco em pouco.
 
