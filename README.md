@@ -35,13 +35,11 @@
 ## HackerRank
 
 <p align="center">
-  <img alt="decision_tree" src="https://miro.medium.com/max/672/1*_64-aCeFjiMDxFZbu4jB-g.png" alt="drawing" width="482" height="130"/>
+  <img alt="decision_tree" src="https://miro.medium.com/max/672/1*_64-aCeFjiMDxFZbu4jB-g.png" alt="drawing" width="482" height="266"/>
   <br>
     <em> Link do curso: https://www.hackerrank.com/domains/sql </em>
 </p>
 
+- Este é um pouco diferente, pois não consigo listar os exercícios, mas no site está separado bonitinho, recomendo olhar
 
-
-Atualmente estou fazendo alguns exercícios neste: https://www.hackerrank.com/domains/sql. Para não perder a prática e ir aprofundando de pouco em pouco.
-
-Se quiser observar as conquistas que tenho lá, só entrar no meu [perfil](https://www.hackerrank.com/rafaelbarbosa1).
+- Se quiser observar as conquistas que tenho lá, só entrar no meu [perfil](https://www.hackerrank.com/rafaelbarbosa1).
