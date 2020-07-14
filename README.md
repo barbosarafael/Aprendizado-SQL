@@ -1,8 +1,8 @@
 # Treinamento de SQL para Data Science
 
-- Todos que estão nesta lista e que estou fazendo são grátis;
+- Todos que estão nesta lista e que estou fazendo são grátis
 
-- **Nota**: Como eu já venho do R (tidyverse) bastante coisas já conheço sobre as funções básicas.
+- **Nota**: Como eu já venho do R (tidyverse) bastante coisas já conheço sobre as funções básicas
 
 ## SQL-Easy
 
@@ -42,4 +42,17 @@
 
 - Este é um pouco diferente, pois não consigo listar os exercícios, mas no site está separado bonitinho, recomendo olhar
 
-- Se quiser observar as conquistas que tenho lá, só entrar no meu [perfil](https://www.hackerrank.com/rafaelbarbosa1).
+- Se quiser observar as conquistas que tenho lá, só entrar no meu [perfil](https://www.hackerrank.com/rafaelbarbosa1)
+
+
+## SQLBolt
+
+<p align="center">
+  <img alt="decision_tree" src="https://wp-dreams.com/wp-content/uploads/2015/05/18/admin/4787/admin/sqlbolt.jpg" alt="drawing" width="350" height="144"/>
+  <br>
+    <em> Link do curso: https://sqlbolt.com/lesson/select_queries_introduction </em>
+</p>
+
+- Assim como no [Hackerrank](https://www.hackerrank.com/domains/sql), não consigo listar os exercícios
+
+- São especialmente para treinar suas querys
